@@ -1,0 +1,12 @@
+body {
+  background-color: #000;
+}
+
+.page {
+  background: rgba(0, 0, 0, 1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
