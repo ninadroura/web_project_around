@@ -16,6 +16,14 @@
   align-items: center;
 }
 
+.profile__avatar {
+  margin-bottom: 30px;
+  display: grid;
+  grid-row: 1 / 2;
+  justify-self: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
 .profile__details {
   margin-left: 30px;
 }
