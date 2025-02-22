@@ -11,6 +11,9 @@ const displayDescription = document.querySelector(
 const buttonSubmit = document.querySelector(".popup__form-button");
 
 function handlePopupOpen() {
+  nameInput.value = displayName.textContent;
+  jobInput.value = displayDescription.textContent;
+
   openPopup.classList.add("popup_opened");
 }
 
