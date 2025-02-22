@@ -10,9 +10,6 @@ const displayDescription = document.querySelector(
 );
 const buttonSubmit = document.querySelector(".popup__form-button");
 
-// nameInput.value = displayName.textContent;
-// jobInput.value = displayDescription.textContent;
-
 function handlePopupOpen() {
   openPopup.classList.add("popup_opened");
 }
