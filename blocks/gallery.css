@@ -14,6 +14,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  position: relative;
 }
 .gallery__card-image {
   max-width: 282px;
@@ -43,18 +44,36 @@
 .gallery__card-like {
   display: flex;
   margin-right: 21px;
-  background: url(../images/like.svg);
+  background: url(../images/like-vector.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.gallery__card-like:active {
-  background: url(../images/like-black.svg);
+.gallery__card-like-active {
+  background: url(../images/LIKE-ACTIVO.png);
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .gallery__card-like:hover {
+  opacity: 0.5;
+}
+
+.gallery__card-delete {
+  width: 18px;
+  height: 20px;
+  background: none;
+  border: none;
+  background-image: url(../images/bausrero.png);
+  background-size: cover;
+  margin-right: 15px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.gallery__card-delete:hover {
+  cursor: pointer;
   opacity: 0.5;
 }
 
