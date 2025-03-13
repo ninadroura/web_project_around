@@ -47,7 +47,7 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
   },
 ];
-
+//
 function handlePopupOpen() {
   openPopup.classList.add("popup_opened");
 }
@@ -66,9 +66,9 @@ function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   displayName.textContent = nameInput.value;
   displayDescription.textContent = jobInput.value;
-  handlePopupClose();
+  openPopup.classList.remove("popup_opened");
 }
-
+//
 function handlePopupAddOpen() {
   openPopupAdd.classList.add("popup-add_opened");
 }
@@ -78,10 +78,10 @@ function handlePopupAddClose() {
 }
 
 function addCards() {
-  gallery.innerHTML = "";
   initialCards.forEach((item) => {
     const card = createCard(item.name, item.link);
     gallery.append(card);
+    openPopupAdd.classList.remove("popup-add_opened");
   });
 }
 
@@ -113,18 +113,17 @@ function handleImageFormSubmit(evt) {
   evt.preventDefault();
   const card = createCard(descriptionInput.value, imageInput.value);
   gallery.prepend(card);
-  formAdd.reset();
-  handlePopupAddClose();
+  openPopupAdd.classList.remove("popup-add_opened");
 }
+
+//
 
 function handlePopupImageOpen(name, link) {
   const popupImg = openPopupImage.querySelector(".popup__img");
   const popupText = openPopupImage.querySelector(".popup__text");
-
   popupImg.src = link;
   popupImg.alt = name;
   popupText.textContent = name;
-
   openPopupImage.classList.add("popup__image_opened");
 }
 
@@ -132,12 +131,12 @@ function handlePopupImageClose() {
   openPopupImage.classList.remove("popup__image_opened");
 }
 
+buttonPopup.addEventListener("click", handlePopupOpen);
 buttonPopup.addEventListener("click", editProfile);
 buttonClosePopup.addEventListener("click", handlePopupClose);
 formElement.addEventListener("submit", handleProfileFormSubmit);
 buttonAdd.addEventListener("click", handlePopupAddOpen);
 buttonCloseAdd.addEventListener("click", handlePopupAddClose);
-imageButtonClose.addEventListener("click", handlePopupImageClose);
+addCards();
 formAdd.addEventListener("submit", handleImageFormSubmit);
-
-document.addEventListener("DOMContentLoaded", addCards);
+imageButtonClose.addEventListener("click", handlePopupImageClose);

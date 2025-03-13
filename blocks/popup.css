@@ -39,7 +39,7 @@
 }
 
 .popup__form-name {
-  font-family: "Inter-Black", sans-serif;
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -51,7 +51,7 @@
 }
 
 .popup__form-occupation {
-  font-family: "Inter-Black", sans-serif;
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -65,7 +65,7 @@
 .popup__form-button {
   background: #000000;
   border-radius: 2px;
-  font-family: "Inter-Black", sans-serif;
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -83,7 +83,6 @@
 
 .popup__button-close {
   height: 40px;
-
   background-image: url("../images/Close\ Icon.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -123,8 +122,7 @@
   }
 
   .popup__button-close {
-    display: flex;
-    align-self: flex-end;
+    margin-left: 260px;
     margin-bottom: 0;
   }
 }

@@ -1,5 +1,6 @@
 .gallery {
   display: grid;
+  flex-wrap: wrap;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 21px 17px;
   margin-top: 50px;
@@ -20,6 +21,13 @@
   max-width: 282px;
   width: 100%;
   border-radius: 10px 10px 0px 0px;
+  max-height: 282px;
+  min-height: 282px;
+}
+
+.gallery__card-image:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .gallery__card-name {
@@ -50,6 +58,8 @@
 }
 
 .gallery__card-like-active {
+  display: flex;
+  margin-right: 21px;
   background: url(../images/LIKE-ACTIVO.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -57,6 +67,7 @@
 
 .gallery__card-like:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .gallery__card-delete {
@@ -66,6 +77,7 @@
   border: none;
   background-image: url(../images/bausrero.png);
   background-size: cover;
+
   margin-right: 15px;
   position: absolute;
   top: 20px;
